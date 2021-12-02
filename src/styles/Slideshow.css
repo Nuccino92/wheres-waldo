@@ -1,0 +1,62 @@
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 700px;
+  box-shadow: 0 3px 3px grey;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 300ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.slide-image-container {
+  display: flex;
+}
+
+.slide-image-container > img {
+  height: 350px;
+  width: 100%;
+  z-index: -1;
+}
+
+.slide-level-info-container {
+  font-family: "Paytone One", sans-serif;
+  padding: 15px;
+  display: flex;
+  font-size: 25px;
+}
+
+.slide-character-image-container {
+  float: right;
+  margin-left: 30px;
+}
+
+/* Buttons */
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  margin: 15px 7px 0px;
+
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: #6a0dad;
+}
