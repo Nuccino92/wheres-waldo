@@ -3,6 +3,10 @@
 @import "./styles/Header.css";
 @import "./styles/Home.css";
 @import "./styles/Slideshow.css";
+@import "./styles/Game.css";
+@import "./styles/GameHeader.css";
+@import "./styles/Dropdown.css";
+@import "./styles/LevelCompleteModal.css";
 
 * {
   margin: 0;
