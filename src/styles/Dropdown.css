@@ -1,0 +1,10 @@
+.dropdown {
+  position: absolute;
+  display: none;
+  background-color: white;
+  height: 40px;
+}
+
+.dropdown.active {
+  display: initial;
+}

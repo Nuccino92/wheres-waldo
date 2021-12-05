@@ -1,0 +1,12 @@
+.home > h1 {
+  display: flex;
+  justify-content: center;
+  animation: blinker 1s linear infinite;
+  margin: 17px 0 17px 0;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
