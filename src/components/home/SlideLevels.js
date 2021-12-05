@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import getCharacters from "../../helpers/getCharacters";
 
 const SlideLevels = ({ level, handleClick }) => {
-  const [charactersIncluded, setCharactersIncluded] = useState([]);
-
-  useEffect(() => {
-    let arr = [];
-    level.characters.map((char) => {
-      return arr.push(getCharacters(char));
-    });
-    setCharactersIncluded(arr);
-  }, [level.characters]);
-
   return (
     <Link to="/game" onClick={() => handleClick(level)}>
       <div className="slide">
@@ -22,14 +12,15 @@ const SlideLevels = ({ level, handleClick }) => {
         <div className="slide-level-info-container">
           <div>LEVEL {level.level} </div>
           <div className="slide-character-image-container">
-            {charactersIncluded.map((char, index) => {
+            {level.characters.map((char, index) => {
+              let image = getCharacters(char);
               return (
                 <img
                   style={{
                     height: "35px",
                     width: "35px",
                   }}
-                  src={`${char}`}
+                  src={image}
                   alt="characters in level"
                   key={index}
                 ></img>
