@@ -1,0 +1,23 @@
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  overflow-y: hidden;
+  margin-top: 80px;
+}
+
+.level-map-container {
+  align-self: center;
+  max-width: 90vw;
+}
+
+.level-map-container > img {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 355px) {
+  .game {
+    margin-top: 140px;
+  }
+}
