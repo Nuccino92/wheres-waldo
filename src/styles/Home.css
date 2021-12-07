@@ -1,8 +1,30 @@
+.home {
+  height: 100vh;
+}
+
+.background-img {
+  background-image: url(../assets/home-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}
+
 .home > h1 {
   display: flex;
   justify-content: center;
-  animation: blinker 1s linear infinite;
-  margin: 17px 0 17px 0;
+  animation: blinker 1.5s linear infinite;
+  margin: 22px 0 22px 0;
+  color: rgb(0, 255, 13);
+  font-family: monospace;
+  text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(251, 249, 249),
+    1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+  font-size: 30px;
 }
 
 @keyframes blinker {
