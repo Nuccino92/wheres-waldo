@@ -1,6 +1,13 @@
+import { checkIfFound } from "../../helpers/checkIfFound";
 import getCharacters from "../../helpers/getCharacters";
 
-const Dropdown = ({ active, event, characters, characterPicked }) => {
+const Dropdown = ({
+  active,
+  event,
+  characters,
+  characterPicked,
+  charactersFound,
+}) => {
   return (
     <div
       style={
@@ -21,20 +28,17 @@ const Dropdown = ({ active, event, characters, characterPicked }) => {
             id={char}
             src={image}
             alt="characters in level"
-            style={imageStyle}
             key={index}
+            className={
+              checkIfFound(char, charactersFound)
+                ? "dropdown-image drop-found"
+                : "dropdown-image"
+            }
           ></img>
         );
       })}
     </div>
   );
-};
-
-const imageStyle = {
-  height: "40px",
-  width: "40px",
-  cursor: "pointer",
-  border: "1px solid red",
 };
 
 export default Dropdown;
