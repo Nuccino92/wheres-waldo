@@ -27,6 +27,9 @@ const SlideLevels = ({ level, handleClick }) => {
               );
             })}
           </div>
+          <Link className="slideshow-leaderboard-btn" to="/leaderboards">
+            <div>Leaderboard</div>
+          </Link>
         </div>
       </div>
     </Link>
