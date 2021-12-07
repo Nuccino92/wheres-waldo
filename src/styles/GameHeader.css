@@ -14,7 +14,7 @@
 
 .game-header > h1 {
   font-family: "Paytone One", sans-serif;
-  color: blue;
+  color: #489dd0;
   letter-spacing: 1px;
 }
 
@@ -43,13 +43,13 @@
   font-family: "Paytone One", sans-serif;
   background-color: rgb(255, 255, 255);
   border: none;
-  outline: 1px solid rgba(37, 24, 219, 0.445);
+  outline: 2px solid #489dd0;
   border-radius: 7px;
-  color: blue;
+  color: #489dd0;
 }
 
 .game-header-btn:hover {
-  background-color: rgb(26, 2, 245);
+  background-color: #489dd0;
   outline: none;
   color: white;
 }
