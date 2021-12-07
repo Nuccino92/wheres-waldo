@@ -1,3 +1,91 @@
+.level-complete-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.level-complete-modal.active {
+  display: initial;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background-image: url(../assets/modal-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60vw;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px grey;
+  font-family: "Paytone One", sans-serif;
+  color: white;
+}
+.modal-content > div {
+  opacity: 0.5;
+}
+
+.modal-content > h2 {
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  margin: 3px;
+}
+
+.modal-content > input {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  min-width: 70%;
+  max-width: 70%;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.modal-btn {
+  font-size: 15px;
+  font-family: "Paytone One", sans-serif;
+  padding: 6px 50px;
+  cursor: pointer;
+  margin: 0 10px;
+  opacity: 1;
+}
+
+.modal-btn:hover {
+  filter: brightness(2);
+  outline: 2px solid gold;
+}
+
+@media (max-width: 650px) {
+  .modal-content > input {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .modal-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 430px) {
+  .modal-btn {
+    font-size: 15px;
+    padding: 5px 20px;
+  }
+}
+
+/* applies border if player submits without adding a name */
 .unfinished {
-  border: 1px solid red;
+  border: 2px solid red;
 }
