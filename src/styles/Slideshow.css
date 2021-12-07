@@ -30,10 +30,12 @@
 
 .slide-level-info-container {
   font-family: "Paytone One", sans-serif;
-  color: rgb(63, 121, 197);
+  color: #489dd0;
   padding: 15px;
   display: flex;
   font-size: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slide-character-image-container {
@@ -59,9 +61,29 @@
 }
 
 .slideshowDot.active {
-  color: rgb(45, 132, 246);
+  color: #489dd0;
 }
 
-.slideshowDot:hover {
-  color: rgb(13, 228, 13);
+.slideshow-leaderboard-btn {
+  font-size: 17px;
+  align-self: center;
+  background-color: rgb(194, 61, 57);
+  text-decoration: none;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.slideshow-leaderboard-btn:hover {
+  transform: rotate(0.02turn);
+}
+
+@media (max-width: 400px) {
+  .slideshow-leaderboard-btn {
+    font-size: 11px;
+  }
+  .slide-level-info-container > div {
+    font-size: 11px;
+    align-self: center;
+  }
 }
