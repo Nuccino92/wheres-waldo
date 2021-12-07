@@ -54,7 +54,9 @@ function Slideshow({ handleClick }) {
             onClick={() => {
               setIndex(idx);
             }}
-          ></div>
+          >
+            {idx + 1}
+          </div>
         ))}
       </div>
     </div>
