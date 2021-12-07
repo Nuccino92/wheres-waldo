@@ -7,6 +7,7 @@
 @import "./styles/GameHeader.css";
 @import "./styles/Dropdown.css";
 @import "./styles/LevelCompleteModal.css";
+@import "./styles/Leaderboards.css";
 
 * {
   margin: 0;
