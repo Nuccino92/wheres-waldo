@@ -3,24 +3,91 @@
   position: fixed;
   top: 0;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 25px 5px 25px;
   width: 100%;
   margin-bottom: 30px;
   background-color: white;
-  border-bottom: 1px solid black;
+  box-shadow: 0 1px 4px rgb(177, 175, 175);
+  cursor: default;
+}
+
+.game-header > h1 {
+  font-family: "Paytone One", sans-serif;
+  color: blue;
+  letter-spacing: 1px;
+}
+
+.timer {
+  outline: 1px solid rgb(197, 184, 184);
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 5px 20px;
+  background-color: rgb(207, 62, 62);
+  color: white;
 }
 
 .header-img {
+  position: relative;
   height: 50px;
   height: 50px;
 }
 
-@media (max-width: 500px) {
+.game-header-btn {
+  font-size: 20px;
+  padding: 1px 15px;
+  cursor: pointer;
+  font-family: "Paytone One", sans-serif;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  outline: 1px solid rgba(37, 24, 219, 0.445);
+  border-radius: 7px;
+  color: blue;
+}
+
+.game-header-btn:hover {
+  background-color: rgb(26, 2, 245);
+  outline: none;
+  color: white;
+}
+
+@media (max-width: 800px) {
   .header-img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
-  .game-header > div {
-    transform: scale(0.7);
+  .game-header > h1 {
+    font-size: 15px;
+  }
+  .timer {
+    font-size: 15px;
+  }
+  .game-header-btn {
+    font-size: 15px;
+  }
+}
+/* dynamic class to show player found the character */
+.found {
+  opacity: 0.4;
+}
+
+@media (max-width: 580px) {
+  .timer {
+    font-size: 15px;
+    padding: 0 4px;
+  }
+
+  .game-header-btn {
+    font-size: 11px;
+    padding: 0 4px;
+  }
+}
+
+@media (max-width: 355px) {
+  .game-header {
+    flex-direction: column;
   }
 }
