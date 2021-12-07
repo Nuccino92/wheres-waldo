@@ -1,10 +1,28 @@
 .dropdown {
   position: absolute;
   display: none;
-  background-color: white;
-  height: 40px;
+  background: none;
 }
 
 .dropdown.active {
   display: initial;
+}
+
+.dropdown-image {
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  border: 2px solid red;
+}
+
+/* dynamic class to show player found the character */
+.drop-found {
+  display: none;
+}
+
+@media (max-width: 355px) {
+  .dropdown-image {
+    height: 25px;
+    width: 25px;
+  }
 }
