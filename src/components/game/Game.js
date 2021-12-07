@@ -74,8 +74,13 @@ const Game = ({ level }) => {
         characters={level.characters}
         event={event}
         active={dropdown}
+        charactersFound={charactersFound}
       />
-      <GameHeader level={level} gameOver={gameOver} />
+      <GameHeader
+        charactersFound={charactersFound}
+        level={level}
+        gameOver={gameOver}
+      />
       <div className="level-map-container">
         <img id={"map"} ref={map} src={level.map} alt="map of level"></img>
       </div>
