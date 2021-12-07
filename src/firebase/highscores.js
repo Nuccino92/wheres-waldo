@@ -16,12 +16,13 @@ export const highscores = () =>
       console.log(err.message);
     });
 
-export const addHighscore = async (level, time, name) => {
+export const addHighscore = async (level, time, name, runTime) => {
   const location = collection(database, "highscores");
 
   addDoc(location, {
     level: level.level,
     time: time,
     name: name,
+    runTime: runTime,
   });
 };
