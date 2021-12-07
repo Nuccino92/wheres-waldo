@@ -3,6 +3,7 @@
   overflow: hidden;
   max-width: 700px;
   box-shadow: 0 3px 3px grey;
+  background-color: white;
 }
 
 .slideshowSlider {
@@ -29,6 +30,7 @@
 
 .slide-level-info-container {
   font-family: "Paytone One", sans-serif;
+  color: rgb(63, 121, 197);
   padding: 15px;
   display: flex;
   font-size: 25px;
@@ -49,14 +51,17 @@
   display: inline-block;
   height: 20px;
   width: 20px;
-  border-radius: 50%;
-
+  text-align: center;
+  font-size: 27px;
   cursor: pointer;
   margin: 15px 7px 0px;
-
-  background-color: #c4c4c4;
+  font-family: "Paytone One", sans-serif;
 }
 
 .slideshowDot.active {
-  background-color: #6a0dad;
+  color: rgb(45, 132, 246);
+}
+
+.slideshowDot:hover {
+  color: rgb(13, 228, 13);
 }
