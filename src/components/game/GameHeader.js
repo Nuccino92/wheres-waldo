@@ -1,25 +1,22 @@
-// import { addHighscore } from "../../firebase/levelData";
-import { addHighscore } from "../../firebase/config";
+import { addHighscore } from "../../firebase/highscores";
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import getCharacters from "../../helpers/getCharacters";
 import LevelCompleteModal from "./LevelCompleteModal";
+import { checkIfFound } from "../../helpers/checkIfFound";
 
-const GameHeader = ({ level, gameOver }) => {
+const GameHeader = ({ level, gameOver, charactersFound }) => {
   const [time, setTime] = useState(0);
   const [timerOn, setTimerOn] = useState(false);
   const [completedTime, setCompletedTime] = useState("");
-  // const [highscoreData, setHighscoreData] = useState();
+  //run time is used for sorting times on leaderboard
+  const [runTime, setRunTime] = useState(0);
   const minutes = useRef(null);
   const seconds = useRef(null);
   const milliseconds = useRef(null);
 
   useEffect(() => {
     setTimerOn(true);
-  }, []);
-
-  useEffect(() => {
-    console.log(level.highscores);
   }, []);
 
   useEffect(() => {
@@ -47,8 +44,12 @@ const GameHeader = ({ level, gameOver }) => {
     setCompletedTime(thetimer);
   };
 
-  const handleSubmitTime = (name, time) => {
-    addHighscore(level, name, time);
+  useEffect(() => {
+    setRunTime(Number(completedTime.replace(/\W+/g, "")));
+  }, [completedTime]);
+
+  const handleSubmitTime = (name, time, runTime) => {
+    addHighscore(level, name, time, runTime);
   };
 
   useEffect(() => {
@@ -62,11 +63,16 @@ const GameHeader = ({ level, gameOver }) => {
       <div>
         {level.characters.map((char, index) => {
           let image = getCharacters(char);
+
           return (
             <img
               src={image}
               alt="characters in level"
-              className="header-img"
+              className={
+                checkIfFound(char, charactersFound)
+                  ? "header-img found"
+                  : "header-img"
+              }
               key={index}
             ></img>
           );
@@ -83,11 +89,16 @@ const GameHeader = ({ level, gameOver }) => {
         <span ref={milliseconds}>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       </div>
       <Link to="/">
-        <button>Return</button>
+        <button className="game-header-btn">Return</button>
+      </Link>
+      <Link to="/leaderboards">
+        <button className="game-header-btn">Leaderboard</button>
       </Link>
       <LevelCompleteModal
+        runTime={runTime}
         time={completedTime}
         handleSubmitTime={handleSubmitTime}
+        gameOver={gameOver}
       />
     </div>
   );
