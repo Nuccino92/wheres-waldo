@@ -1,0 +1,95 @@
+.leaderboards {
+  background-color: rgb(253, 253, 253, 0.8);
+  background-size: min-content;
+  font-family: "Paytone One", sans-serif;
+  overflow-wrap: break-word;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboards-title-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+}
+
+.leaderboards-title-container > h1 {
+  font-size: 40px;
+  color: red;
+}
+
+.leaderboards-title-container > h2 {
+  font-size: 27px;
+  align-self: center;
+}
+
+.leaderboards-title-btn {
+  align-self: center;
+}
+
+.leaderboards-title-btn > button {
+  font-size: 20px;
+  border: none;
+  background: none;
+  color: #489dd0;
+  padding: 2px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 2px solid #489dd0;
+  font-family: "Paytone One", sans-serif;
+}
+
+.leaderboards-title-btn > button:hover {
+  color: white;
+  background-color: #489dd0;
+}
+
+/* rank, name, time */
+.leaderboards > .span-container {
+  display: flex;
+  justify-content: center;
+}
+
+.leaderboards > .span-container > span {
+  width: 30vw;
+  margin-right: 25px;
+}
+
+.leaderboards-list {
+  border: 1px solid black;
+  display: flex;
+  justify-content: start;
+  font-size: 30px;
+  overflow-wrap: break-word;
+  padding: 4px;
+  justify-content: center;
+}
+
+.leaderboards-list > .leaderboards-info-container {
+  display: flex;
+  justify-content: center;
+}
+
+.leaderboards-list > .leaderboards-info-container > div {
+  position: relative;
+  margin-right: 25px;
+  width: 30vw;
+}
+
+@media (max-width: 500px) {
+  .leaderboards-list {
+    font-size: 14px;
+  }
+  .leaderboards > .span-container > span {
+    font-size: 11px;
+  }
+  .leaderboards-title-container > h1 {
+    font-size: 20px;
+  }
+  .leaderboards-title-container > h2,
+  .leaderboards-title-btn > button {
+    font-size: 16px;
+    padding: 1px 5px;
+  }
+}
