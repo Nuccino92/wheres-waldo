@@ -34,9 +34,11 @@ const LevelCompleteModal = ({ time, handleSubmitTime, runTime, gameOver }) => {
           <Link to="/">
             <button className="modal-btn">Back</button>
           </Link>
-          <button className="modal-btn" onClick={handleClick}>
-            Submit
-          </button>
+          <Link to="/leaderboards">
+            <button className="modal-btn" onClick={handleClick}>
+              Submit
+            </button>
+          </Link>
         </div>
       </div>
     </div>
